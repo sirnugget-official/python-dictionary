@@ -2,6 +2,7 @@
   "index": "Introduction",
   "basics": "Basics",
   "intermediate": "Intermediate",
+  "advanced": "Advanced",
   "about": {
     "title": "About",
     "type": "page"
