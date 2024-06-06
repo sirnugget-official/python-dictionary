@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/sirnugget-official',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Made with 💖 by Mayson Reader',
   },
 }
 
