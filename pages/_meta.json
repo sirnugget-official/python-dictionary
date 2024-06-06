@@ -1,7 +1,19 @@
 {
   "index": "Introduction",
+  "-- Basics": {
+    "type": "separator",
+    "title": "Basics"
+  },
   "basics": "Basics",
+  "-- Intermediate": {
+    "type": "separator",
+    "title": "Intermediate"
+  },
   "intermediate": "Intermediate",
+  "-- Advanced": {
+    "type": "separator",
+    "title": "Advanced"
+  },
   "advanced": "Advanced",
   "about": {
     "title": "About",
