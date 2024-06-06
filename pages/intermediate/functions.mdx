@@ -1,0 +1,47 @@
+# Functions
+A function in python is a block of code that will only run once it is called. In a function you can pass known parameters (data) into the function and as a result the function can return data.
+
+## Creating and Calling a Function
+A function is defined by using the **def** keyword
+```py filename='functions.py' copy
+def function_example():
+  print('Hello there from a function!')
+```
+In order to call a function you need to use the function name followed by parenthesis
+```py filename='functions.py' {4} copy
+def function_example():
+  print('Hello there from a function!')
+
+function_example()
+```
+
+## Function Arguments
+Arguments in a function are specified after the function name inside of the parenthesis. There is no limit to how many arguments you can add into the function, they are just required to be seperated by a comma. The following example has a function with a singular argument called **name**. If the function is called we can pass the first name of the user which the function uses to print out the hello.
+```py filename='functions.py' copy
+def function_example(name):
+  print(f'👋 Hello there {name}!')
+
+function_example("Mayson")
+function_example("Jack")
+function_example("Ryder")
+function_example("Tobias")
+```
+
+We can expand on this by also passing in the last name of the user.
+```py filename='functions.py' copy
+def function_example(fname, lname):
+  print(f'Hola {lname}, {fname}!')
+
+function_example("Mayson", "Reader")
+function_example("Jack", "Boon")
+function_example("Ryder", "Bennett")
+function_example("Tobias", "Clifford")
+```
+
+# Pass
+If for some reason you ever have a function that has no content, you can put in the **pass** statement to avoid Python giving you an error.
+```py filename='functions.py' copy
+def function_example():
+  pass
+```
+Otherwise you can just comment out the statement using **#**.
