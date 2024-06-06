@@ -1,3 +1,16 @@
 {
-  "basics": "Basics"
+  "index": "Introduction",
+  "basics": "Basics",
+  "intermediate": "Intermediate",
+  "advanced": "Advanced",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "mailto:mayson.reader@protonmail.com",
+    "newWindow": true
+  }
 }
