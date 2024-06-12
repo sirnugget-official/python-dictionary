@@ -3,7 +3,7 @@ Here is a bit more on value types. There are numerous different value types on p
 
 ### Strings
 A string is a value that contains text. In order to assign a string you need to do this
-```py filename="main.py" copy
+```py filename="valuetypes.py" copy
 # Assigning the string...
 string = "This is a string"
 
@@ -22,7 +22,7 @@ integer = 100
 print(integer)
 ```
 You can make this a little bit more complex by making using an input.
-```py filename="main.py" copy
+```py filename="valuetypes.py" copy
 integer = int(input("Integer: "))
 
 print(integer)
@@ -31,7 +31,7 @@ We will talk more about inputs later on but here is a basic piece of code explai
 
 ### Float
 A float is another type of number but a float can include decimal points like so
-```py filename="main.py" copy
+```py filename="valuetypes.py" copy
 # Assigns the float value of 15.501
 floatvar = 15.501
 
@@ -40,3 +40,18 @@ print(floatvar)
 ```
 If you run this code then it will print out **15.501** into the console.
 
+### Boolean
+A boolean represents one of two values, true or false.
+```py filename='valuetypes.py' copy
+booleanval = True
+
+print(f'The current state of the boolean is: {booleanval}')
+```
+A boolean can also be returned by a function
+```py filename='valuetypes.py' copy
+def boolfunc():
+  return True
+
+print(boolfunc())
+```
+These pieces of code will return the value of **True**
