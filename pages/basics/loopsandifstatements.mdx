@@ -1,0 +1,37 @@
+# Loops and If Statements
+Loops and if statements are a huge part of coding in Python. As such, you can use if statements if you are solving mathematic equations or making games. An if statement is formed by using the **if** keyword.
+```py filename='loopsandstatements.py' copy
+a = 10
+b = 20
+
+if a > b:
+  print('A is greater than B.')
+else:
+  print('B is greater than A.')
+```
+I used 2 integer values in this example. A is 10 and B is 20, as we know B is going to be greater than A and this will print out **B is greater than A.** in the console.
+## Elif
+The elif keyword only runs if the previous statement is not true.
+```py filename='loopsandstatements.py' copy
+a = 10
+b = 10
+
+if a > b:
+  print('A is greater than B.')
+elif a == b:
+  print('B and A are equal.')
+```
+The first condition is false, which means that it will skip to the elif statement and we will print into the console **"B and A are equal."**.
+
+## Else
+The else keyword runs if the previous statements do not catch onto anything.
+```py filename='loopsandstatements.py' copy
+a = 10
+b = 20
+
+if a > b:
+  print('A is greater than B.')
+elif a == b:
+  print('A and B is equal.')
+else:
+  print('B is greater than A.')
