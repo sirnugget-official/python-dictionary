@@ -15,6 +15,11 @@
     "title": "Advanced"
   },
   "advanced": "Advanced",
+  "-- File Handling: {
+    "type": "seperator",
+    "title": "File Handling in Python"
+  },
+  "filehandling": "File Handling",
   "about": {
     "title": "About",
     "type": "page"
