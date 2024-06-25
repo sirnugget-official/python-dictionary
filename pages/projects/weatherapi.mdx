@@ -2,7 +2,9 @@
 As an extention project you can create a weather application in which shows you the weather forecast for the city that you select. For this we are going to be using the [wttr.in](https://github.com/chubin/wttr.in) weather library.
 
 ## BEFORE YOU BEGIN!
-Before you begin ensure that you have 
+Before you begin ensure that you have installed the requests library into your project file by running **python -m pip install requests** or just **pip install requests** or else the project will not work at all.
+
+## Lets begin!
 
 To start, lets begin with importing the requests library
 ```py filename='weather.py' copy
@@ -51,7 +53,6 @@ def weather_report(city):
 
 weather_report(city_name)
 ```
-And there you have it, a fully working weather application in Python.
 
 Here is a weather report for Sydney, Australia
 ```py filename="weather.py" copy
@@ -94,3 +95,22 @@ Weather report: Sydney
 └──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
 Location: Sydney, NSW, Australia [-33.8548157,151.2164539]
 ```
+You can also get this in **.png** format by changing the code to
+```py filename="weather.py" copy
+import requests
+
+city_name = input('Enter a city name: ')
+
+def weather_report(city):
+  url = 'https://wttr.in/{}.png'.format(city)
+  try:
+    data = requests.get(url)
+    T = data.text
+  except:
+    T = "An error has occured"
+  print(T)
+
+weather_report(city_name)
+```
+
+And there you have it, a fully working weather application in Python. Check out the [github](https://github.com/chubin/wttr.in) repository for wttr.in to find more ways that you can express your weather in Python and on the web!
