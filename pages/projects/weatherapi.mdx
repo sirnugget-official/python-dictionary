@@ -1,0 +1,91 @@
+# Weather Application
+As an extention project you can create a weather application in which shows you the weather forecast for the city that you select. To start, lets begin with importing the requests library
+```py filename='weather.py' copy
+import requests
+```
+The requests library is used for making HTTP requests and allows you to send and receive data from web servers using HTTP methods like GET, POST, PUT, DELETE and many more.
+
+Next we are going to define the input of city_name and the function weather_report
+```py filename="weather.py" copy
+import requests
+
+city_name = input('Enter a city name: ')
+
+def weather_report(city):
+  pass # Ensures that you dont get any errors
+```
+Now we can finish off the weather_report function adding in the data and the url that the requests library requires.
+```py filename="weather.py" copy
+import requests
+
+city_name = input('Enter a city name: ')
+
+def weather_report(city):
+  url = 'https://wttr.in/{}'.format(city)
+  try:
+    data = requests.get(url)
+    T = data.text
+  except:
+    T = "An error has occured"
+  print(T)
+```
+And finally we can call the weater_report function and add in the city_name variable we defined earlier
+```py filename="weather.py" copy
+import requests
+
+city_name = input('Enter a city name: ')
+
+def weather_report(city):
+  url = 'https://wttr.in/{}'.format(city)
+  try:
+    data = requests.get(url)
+    T = data.text
+  except:
+    T = "An error has occured"
+  print(T)
+
+weather_report(city_name)
+```
+And there you have it, a fully working weather application in Python.
+
+Here is a weather report for Sydney, Australia
+```py filename="weather.py" copy
+Weather report: Sydney
+
+      \   /     Sunny
+       .-.      +55(53) °F     
+    ― (   ) ―   ↘ 8 mph        
+       `-’      6 mi           
+      /   \     0.0 in         
+                                                       ┌─────────────┐                                                       
+┌──────────────────────────────┬───────────────────────┤  Tue 25 Jun ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│     \   /     Sunny          │     \   /     Sunny          │     \   /     Clear          │  _`/"".-.     Patchy rain ne…│
+│      .-.      +51(50) °F     │      .-.      60 °F          │      .-.      60 °F          │   ,\_(   ).   +57(55) °F     │
+│   ― (   ) ―   → 8-11 mph     │   ― (   ) ―   ↘ 7-9 mph      │   ― (   ) ―   ↙ 9-16 mph     │    /(___(__)  ↓ 9-17 mph     │
+│      `-’      6 mi           │      `-’      6 mi           │      `-’      6 mi           │      ‘ ‘ ‘ ‘  6 mi           │
+│     /   \     0.0 in | 0%    │     /   \     0.0 in | 0%    │     /   \     0.0 in | 0%    │     ‘ ‘ ‘ ‘   0.0 in | 76%   │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+                                                       ┌─────────────┐                                                       
+┌──────────────────────────────┬───────────────────────┤  Wed 26 Jun ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│    \  /       Partly Cloudy  │     \   /     Sunny          │    \  /       Partly Cloudy  │     \   /     Clear          │
+│  _ /"".-.     +57(55) °F     │      .-.      64 °F          │  _ /"".-.     62 °F          │      .-.      +59(57) °F     │
+│    \_(   ).   ↘ 9-13 mph     │   ― (   ) ―   ↘ 11-15 mph    │    \_(   ).   → 4-9 mph      │   ― (   ) ―   → 6-10 mph     │
+│    /(___(__)  6 mi           │      `-’      6 mi           │    /(___(__)  6 mi           │      `-’      6 mi           │
+│               0.0 in | 0%    │     /   \     0.0 in | 0%    │               0.0 in | 0%    │     /   \     0.0 in | 0%    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+                                                       ┌─────────────┐                                                       
+┌──────────────────────────────┬───────────────────────┤  Thu 27 Jun ├───────────────────────┬──────────────────────────────┐
+│            Morning           │             Noon      └──────┬──────┘     Evening           │             Night            │
+├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤
+│     \   /     Sunny          │     \   /     Sunny          │     \   /     Clear          │     \   /     Clear          │
+│      .-.      +53(51) °F     │      .-.      60 °F          │      .-.      +59(57) °F     │      .-.      +55(51) °F     │
+│   ― (   ) ―   → 8-11 mph     │   ― (   ) ―   → 10-12 mph    │   ― (   ) ―   ↗ 8-14 mph     │   ― (   ) ―   ↗ 9-16 mph     │
+│      `-’      6 mi           │      `-’      6 mi           │      `-’      6 mi           │      `-’      6 mi           │
+│     /   \     0.0 in | 0%    │     /   \     0.0 in | 0%    │     /   \     0.0 in | 0%    │     /   \     0.0 in | 0%    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────────┴──────────────────────────────┘
+Location: Sydney, NSW, Australia [-33.8548157,151.2164539]
+```
