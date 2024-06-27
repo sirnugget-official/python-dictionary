@@ -2,5 +2,6 @@
   "basics": "Get Started",
   "inputs": "Inputs",
   "valuetypes": "Value Types",
-  "loopsandifstatements": "Loops and If Statements"
+  "loopsandifstatements": "Loops and If Statements",
+  "math": "Math"
 }
