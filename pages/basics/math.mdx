@@ -1,0 +1,44 @@
+# Math
+There are multiple functions in Python, some of them are math functions.
+
+## Addition
+You can easily add up sums in Python by using the **+**.
+```py filename="math.py" copy
+print(501, 15, 109)
+```
+You can even add up sums in a function
+```py filename="math.py" copy
+def additionFunction(sum1, sum2, sum3):
+    finalSum = sum1 + sum2 + sum3
+    return finalSum
+
+print(additionFunction(501, 15, 109))
+```
+
+## Subtraction
+To subtract sums in Python you can use **-**.
+```py filename="math.py" copy
+print(1000 - 109)
+```
+You can even subtract sums in a function like last time
+```py filename="math.py" copy
+def subtractionFunction(sum1, sum2, sum3):
+  finalSum = sum1 - sum2 - sum3
+  return finalSum
+
+print(subtractionFunction(1000, 109, 506))
+```
+
+## Times (multiply)
+Multiplication in Python is a little bit different than using **x** or something similar like you are used to. Instead you are required to use a star (*) to multiply.
+```py filename="math.py" copy
+print(10 * 100)
+```
+To multiply in a function you can use the code below
+```py filename="math.py" copy
+def multiplicationFunction(sum1, sum2, sum3):
+  finalSum = sum1 * sum2 * sum3
+  return finalSum
+
+print(multiplicationFunction(10, 50, 100))
+```
